@@ -23,7 +23,7 @@ module.exports = {
     injectCode({
       'adoptedStyleSheets.js': {
         line: 3,
-        code: "  if ('adoptedStyleSheets' in document) { return; }\n",
+        code: "  if (typeof document === 'undefined' || 'adoptedStyleSheets' in document) { return; }\n",
       }
     }),
   ],
